@@ -1,0 +1,10 @@
+<div class="users">
+  <ul class="users__list">
+    <li class="users__list-item" *ngFor="let user of users">
+      <app-user-card [user]="user" (onDelete)="onDelete($event)" />
+    </li>
+  </ul>
+
+  <button class="users__more-btn" type="button" (click)="loadMore($event)" [disabled]="currentPage === totalPages">More</button>
+
+</div>

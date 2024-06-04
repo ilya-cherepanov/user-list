@@ -1,0 +1,14 @@
+.user-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-card__avatar {
+  width: 60px;
+}

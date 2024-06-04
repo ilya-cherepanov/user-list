@@ -1,0 +1,7 @@
+<a class="user-card" href="" (click)="onClick($event, user?.id ?? 0)">
+  <div class="user-card__content">
+    <img class="user-card__avatar" [src]="user?.avatar" alt="{{user?.firstName}} {{user?.lastName}} avatar">
+    <p class="user-card__details">{{user?.firstName}} {{user?.lastName}}</p>
+    <button class="user-card__delete-btn" type="button" (click)="deleteUser($event)">Delete</button>
+  </div>
+</a>
