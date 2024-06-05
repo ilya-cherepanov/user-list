@@ -6,6 +6,8 @@ export interface RawUser {
   avatar: string;
 }
 
+export type UpdatedRawUser = Omit<Partial<RawUser>, 'id'>;
+
 interface RawDataPage {
   page: number;
   per_page: number;
@@ -24,6 +26,8 @@ export interface User {
   lastName: string;
   avatar: string;
 }
+
+export type UpdatedUser = Omit<Partial<User>, 'id'>;
 
 interface DataPage {
   page: number;

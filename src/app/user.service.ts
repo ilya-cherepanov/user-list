@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { RawUser, RawUserDataPage, User, UserDataPage } from './types';
+import { RawUser, RawUserDataPage, UpdatedRawUser, UpdatedUser, User, UserDataPage } from './types';
 import { API_URL } from './constants';
-import { Observable, map } from 'rxjs';
+import { Observable, map, tap } from 'rxjs';
 import { mapFromRawUserDataPage, mapRawUserToUser } from './utils';
 
 @Injectable({
@@ -28,13 +28,19 @@ export class UserService {
   public getUser(userId: number): Observable<User> {
     const url = `${API_URL}${UserService.BASE_URL}/${userId}`;
 
-    return this.http.get<RawUser>(url)
+    return this.http.get<{ data: RawUser }>(url)
       .pipe(
-        map((user): User => mapRawUserToUser(user)),
+        map((user): User => mapRawUserToUser(user.data)),
       );
   }
 
-  public deleteUser(userId: number) {
+  public updateUser(userId: number, user: Partial<User>): Observable<UpdatedUser> {
+    const url = `${API_URL}${UserService.BASE_URL}/${userId}`;
+
+    return this.http.put<UpdatedUser>(url, user, UserService.HTTP_OPTIONS);
+  }
+
+  public deleteUser(userId: number): Observable<unknown> {
     const url = `${API_URL}${UserService.BASE_URL}/${userId}`;
 
     return this.http.delete(url, UserService.HTTP_OPTIONS);

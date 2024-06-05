@@ -1,0 +1,21 @@
+<section>
+  <h2>Profile</h2>
+
+  <ng-container *ngIf="user; else loading">
+    <ng-container *ngIf="isEditing; else noEditing">
+      <app-user-edit
+        [user]="user"
+        (onCancel)="setEditing(false)"
+        (onSubmit)="saveUser($event)"
+      />
+    </ng-container>
+
+    <ng-template #noEditing>
+      <app-user-info [user]="user" (onEdit)="setEditing(true)" />
+    </ng-template>
+  </ng-container>
+
+  <ng-template #loading>
+    <app-spinner />
+  </ng-template>
+</section>

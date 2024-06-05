@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { User } from '../types';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-card',
@@ -13,7 +13,9 @@ export class UserCardComponent {
   @Input() user?: User;
   @Output() onDelete = new EventEmitter<number>();
 
-  constructor(private readonly location: Location) {}
+  constructor(
+    private readonly router: Router,
+  ) {}
 
   deleteUser(evt: MouseEvent) {
     evt.stopPropagation();
@@ -27,6 +29,6 @@ export class UserCardComponent {
   onClick(evt: MouseEvent, userId: number) {
     evt.preventDefault();
 
-    this.location.go(`/users/${userId}`);
+    this.router.navigate(['/users', userId]);
   }
 }

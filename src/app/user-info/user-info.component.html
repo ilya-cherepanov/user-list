@@ -1,0 +1,12 @@
+<div>
+  <img [src]="user.avatar" height="128" alt="Avatar">
+  <dl>
+    <dt>First Name:</dt>
+    <dd>{{user.firstName}}</dd>
+    <dt>Last Name:</dt>
+    <dd>{{user.lastName}}</dd>
+    <dt>Email:</dt>
+    <dd>{{user.email}}</dd>
+  </dl>
+  <button type="button" (click)="clickEdit($event)">Edit</button>
+</div>
