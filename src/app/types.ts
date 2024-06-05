@@ -39,3 +39,27 @@ interface DataPage {
 export interface UserDataPage extends DataPage {
   data: User[];
 }
+
+export interface RawResource {
+  id: number;
+  name: string;
+  year: number;
+  color: string;
+  pantone_value: string;
+}
+
+export interface RawResourceDataPage extends RawDataPage {
+  data: RawResource[];
+}
+
+export interface Resource {
+  id: number;
+  name: string;
+  year: number;
+  color: string;
+  pantoneValue: string;
+}
+
+export interface ResourceDataPage extends DataPage {
+  data: Resource[];
+}

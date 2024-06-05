@@ -1,4 +1,13 @@
-import { RawUser, RawUserDataPage, User, UserDataPage } from "./types";
+import {
+  RawResource,
+  RawResourceDataPage,
+  RawUser,
+  RawUserDataPage,
+  Resource,
+  ResourceDataPage,
+  User,
+  UserDataPage,
+} from "./types";
 
 export function mapRawUserToUser(user: RawUser): User {
   return {
@@ -27,5 +36,25 @@ export function mapFromRawUserDataPage(dataPage: RawUserDataPage): UserDataPage 
     perPage: dataPage.per_page,
     totalPages: dataPage.total_pages,
     data: dataPage.data.map(mapRawUserToUser),
+  };
+}
+
+export function mapRawResourceToResource(resource: RawResource): Resource {
+  return {
+    id: resource.id,
+    name: resource.name,
+    year: resource.year,
+    color: resource.color,
+    pantoneValue: resource.pantone_value,
+  };
+}
+
+export function mapFromRawResourceDataPage(resourcePage: RawResourceDataPage): ResourceDataPage {
+  return {
+    page: resourcePage.page,
+    total: resourcePage.total,
+    perPage: resourcePage.per_page,
+    totalPages: resourcePage.total_pages,
+    data: resourcePage.data.map(mapRawResourceToResource),
   };
 }

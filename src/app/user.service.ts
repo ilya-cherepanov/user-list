@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { RawUser, RawUserDataPage, UpdatedRawUser, UpdatedUser, User, UserDataPage } from './types';
+import { RawUser, RawUserDataPage, UpdatedUser, User, UserDataPage } from './types';
 import { API_URL } from './constants';
-import { Observable, map, tap } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { mapFromRawUserDataPage, mapRawUserToUser } from './utils';
 
 @Injectable({

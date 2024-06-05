@@ -1,0 +1,18 @@
+.resource {
+  display: flex;
+}
+
+.resource__canvas {
+  border-radius: 10px;
+}
+
+.resource__props {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  margin: 0;
+  margin-inline-start: 20px;
+}
+
+.resource__prop-value {
+  margin: 0;
+}

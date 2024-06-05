@@ -1,0 +1,7 @@
+@media (min-width: 768px) {
+  .home-page__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}

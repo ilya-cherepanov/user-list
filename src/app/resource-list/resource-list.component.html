@@ -1,0 +1,16 @@
+<section class="resources">
+  <h2 class="resources__title">Resources</h2>
+
+  <ul class="resources__list">
+    <li class="resources__item" *ngFor="let resource of resources">
+      <app-resource-card [resource]="resource" />
+    </li>
+  </ul>
+
+  <button
+    class="resources__more-btn"
+    type="button"
+    (click)="loadMore($event)"
+    [disabled]="currentPage === totalPages"
+  >More</button>
+</section>

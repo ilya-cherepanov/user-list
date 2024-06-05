@@ -1,0 +1,19 @@
+.resources__title {
+  text-align: center;
+}
+
+.resources__list {
+  list-style: none;
+  padding: 20px;
+  width: max-content;
+  margin-inline: auto;
+}
+
+.resources__item:not(:last-of-type) {
+  margin-block-end: 20px;
+}
+
+.resources__more-btn {
+  display: block;
+  margin-inline: auto;
+}

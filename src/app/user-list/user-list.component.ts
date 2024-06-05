@@ -51,16 +51,4 @@ export class UserListComponent implements OnInit {
 
     this.loadUsers(this.currentPage + 1);
   }
-
-  // onPrevious(): void {
-  //   if (!this.loading && this.users && this.users.page > 1) {
-  //     this.loadUsers(this.users.page - 1);
-  //   }
-  // }
-
-  // onNext(): void {
-  //   if (!this.loading && this.users && this.users.page < this.users.totalPages) {
-  //     this.loadUsers(this.users.page + 1);
-  //   }
-  // }
 }
