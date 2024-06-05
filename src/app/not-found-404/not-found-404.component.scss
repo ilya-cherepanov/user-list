@@ -1,0 +1,16 @@
+.not-found-page {
+  display: flex;
+  height: 100vh;
+  height: 100dvh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-page__title {
+  margin: 0;
+}
+
+.not-found-page__home-link {
+  font-size: 20px;
+}

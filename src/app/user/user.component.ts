@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../types';
 import { NgIf } from '@angular/common';
 import { UserInfoComponent } from '../user-info/user-info.component';
 import { UserEditComponent } from '../user-edit/user-edit.component';
 import { SpinnerComponent } from '../spinner/spinner.component';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-user',
@@ -21,7 +22,8 @@ export class UserComponent implements OnInit {
   constructor(
     private readonly userService: UserService,
     private readonly route: ActivatedRoute,
-  ) {}
+    private readonly router: Router,
+  ) { }
 
   ngOnInit(): void {
     this.getUser();
@@ -31,8 +33,15 @@ export class UserComponent implements OnInit {
     const userId = parseInt(this.route.snapshot.paramMap.get("id") ?? "");
 
     this.userService.getUser(userId)
-      .subscribe((user) => {
-        this.user = user;
+      .subscribe({
+        next: (user) => {
+          this.user = user;
+        },
+        error: (err) => {
+          if (err instanceof HttpErrorResponse && err.status === 404) {
+            this.router.navigate(['not-found']);
+          }
+        },
       });
   }
 
