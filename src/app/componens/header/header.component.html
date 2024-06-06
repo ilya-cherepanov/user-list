@@ -1,0 +1,11 @@
+<header>
+  <div>
+    <ng-container *ngIf="user; else noUser">
+      <p>Email: {{ user.email }}</p>
+      <a href="" (click)="logout($event)">Logout</a>
+    </ng-container>
+    <ng-template #noUser>
+      <a routerLink="/login">Login</a>
+    </ng-template>
+  </div>
+</header>

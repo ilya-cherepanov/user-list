@@ -6,6 +6,7 @@ import {
   Resource,
   ResourceDataPage,
   User,
+  UserAccount,
   UserDataPage,
 } from "./types";
 
@@ -57,4 +58,23 @@ export function mapFromRawResourceDataPage(resourcePage: RawResourceDataPage): R
     totalPages: resourcePage.total_pages,
     data: resourcePage.data.map(mapRawResourceToResource),
   };
+}
+
+export function extractUserAccount(): UserAccount | null {
+  const user = localStorage.getItem('user');
+  if (!user) {
+    return null;
+  }
+
+  const userData = JSON.parse(user);
+  if (typeof userData === 'object'
+    && 'token' in userData
+    && typeof userData.token === 'string'
+    && 'email' in userData
+    && typeof userData.email === 'string'
+  ) {
+    return userData;
+  }
+
+  return null;
 }

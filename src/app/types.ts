@@ -1,3 +1,5 @@
+import { AuthStatus } from "./constants";
+
 export interface RawUser {
   id: number;
   email: string;
@@ -63,3 +65,15 @@ export interface Resource {
 export interface ResourceDataPage extends DataPage {
   data: Resource[];
 }
+
+export interface Credentials {
+  email: string;
+  password: string;
+}
+
+export interface UserAccount {
+  email: string;
+  token: string;
+}
+
+export type AuthStatusType = typeof AuthStatus[number];
