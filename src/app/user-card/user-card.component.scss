@@ -7,7 +7,6 @@
   border: 1px solid black;
   border-radius: 10px;
   overflow: hidden;
-  padding-inline-end: 10px;
   transition: 0.02s linear all;
 }
 
@@ -24,4 +23,10 @@
 
 .user-card__avatar {
   width: 60px;
+}
+
+.user-card__delete-btn {
+  align-self: stretch;
+  border-radius: 0;
+  width: max-content;
 }

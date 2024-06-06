@@ -1,12 +1,12 @@
-<div>
-  <img [src]="user.avatar" height="128" alt="Avatar">
-  <dl>
-    <dt>First Name:</dt>
-    <dd>{{user.firstName}}</dd>
-    <dt>Last Name:</dt>
-    <dd>{{user.lastName}}</dd>
-    <dt>Email:</dt>
-    <dd>{{user.email}}</dd>
+<div class="user-info">
+  <img class="user-info__avatar" [src]="user.avatar" height="128" alt="Avatar">
+  <dl class="user-info__details">
+    <dt class="user-info__detail-name">First Name:</dt>
+    <dd class="user-info__detail-value">{{user.firstName}}</dd>
+    <dt class="user-info__detail-name">Last Name:</dt>
+    <dd class="user-info__detail-value">{{user.lastName}}</dd>
+    <dt class="user-info__detail-name">Email:</dt>
+    <dd class="user-info__detail-value">{{user.email}}</dd>
   </dl>
-  <button type="button" (click)="clickEdit($event)">Edit</button>
+  <button class="btn user-info__edit-btn" type="button" (click)="clickEdit($event)">Edit</button>
 </div>

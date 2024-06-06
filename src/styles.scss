@@ -20,3 +20,30 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.btn {
+  display: block;
+  width: 100%;
+  padding-inline: 30px;
+  padding-block: 15px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #888888;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #999999;
+}
+
+.btn:active {
+  background-color: #888888;
+}
+
+.btn:disabled {
+  background-color: #BBBBBB;
+  color: #CCCCCC;
+  cursor: auto;
+}

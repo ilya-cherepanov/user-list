@@ -2,6 +2,6 @@
   <div class="user-card__content">
     <img class="user-card__avatar" [src]="user?.avatar" height="60" alt="{{user?.firstName}} {{user?.lastName}} avatar">
     <p class="user-card__details">{{user?.firstName}} {{user?.lastName}}</p>
-    <button class="user-card__delete-btn" type="button" (click)="deleteUser($event)">Delete</button>
+    <button class="btn user-card__delete-btn" type="button" (click)="deleteUser($event)">Delete</button>
   </div>
 </a>

@@ -7,6 +7,11 @@
     </li>
   </ul>
 
-  <button class="users__more-btn" type="button" (click)="loadMore($event)" [disabled]="currentPage === totalPages">More</button>
+  <button
+    class="btn users__more-btn"
+    type="button"
+    (click)="loadMore($event)"
+    [disabled]="currentPage === totalPages"
+  >More</button>
 
 </section>
