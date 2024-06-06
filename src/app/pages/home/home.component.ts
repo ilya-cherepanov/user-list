@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { UserCardComponent } from '../user-card/user-card.component';
-import { UserListComponent } from '../user-list/user-list.component';
-import { ResourceListComponent } from '../resource-list/resource-list.component';
+import { UserCardComponent } from '../../componens/user-card/user-card.component';
+import { UserListComponent } from '../../componens/user-list/user-list.component';
+import { ResourceListComponent } from '../../componens/resource-list/resource-list.component';
 
 @Component({
   selector: 'app-home',

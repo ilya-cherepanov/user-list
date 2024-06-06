@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { API_URL } from './constants';
+import { API_URL } from '../constants';
 import { Observable, map } from 'rxjs';
-import { RawResourceDataPage, ResourceDataPage } from './types';
-import { mapFromRawResourceDataPage } from './utils';
+import { RawResourceDataPage, ResourceDataPage } from '../types';
+import { mapFromRawResourceDataPage } from '../utils';
 
 @Injectable({
   providedIn: 'root'

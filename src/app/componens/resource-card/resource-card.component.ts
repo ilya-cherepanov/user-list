@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { Resource } from '../types';
+import { Resource } from '../../types';
 
 @Component({
   selector: 'app-resource-card',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ResourceService } from '../resource.service';
-import { Resource } from '../types';
+import { ResourceService } from '../../services/resource.service';
+import { Resource } from '../../types';
 import { ResourceCardComponent } from '../resource-card/resource-card.component';
 import { NgFor } from '@angular/common';
 

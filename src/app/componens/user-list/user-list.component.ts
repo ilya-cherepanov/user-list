@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserCardComponent } from '../user-card/user-card.component';
-import { UserService } from '../user.service';
-import { User, UserDataPage } from '../types';
+import { UserService } from '../../services/user.service';
+import { User, UserDataPage } from '../../types';
 import { NgFor, NgIf } from '@angular/common';
 
 @Component({

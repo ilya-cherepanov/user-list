@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
+import { UserService } from '../../services/user.service';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { User } from '../types';
+import { User } from '../../types';
 import { NgIf } from '@angular/common';
-import { UserInfoComponent } from '../user-info/user-info.component';
-import { UserEditComponent } from '../user-edit/user-edit.component';
-import { SpinnerComponent } from '../spinner/spinner.component';
+import { UserInfoComponent } from '../../componens/user-info/user-info.component';
+import { UserEditComponent } from '../../componens/user-edit/user-edit.component';
+import { SpinnerComponent } from '../../componens/spinner/spinner.component';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
