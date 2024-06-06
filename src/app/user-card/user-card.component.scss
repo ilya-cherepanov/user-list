@@ -4,6 +4,19 @@
 }
 
 .user-card__content {
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-inline-end: 10px;
+  transition: 0.02s linear all;
+}
+
+.user-card__content:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 1px 5px black;
+}
+
+.user-card__content {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,4 +1,6 @@
-<div class="users">
+<section class="users">
+  <h2 class="users__title">Users</h2>
+
   <ul class="users__list">
     <li class="users__list-item" *ngFor="let user of users">
       <app-user-card [user]="user" (onDelete)="onDelete($event)" />
@@ -7,4 +9,4 @@
 
   <button class="users__more-btn" type="button" (click)="loadMore($event)" [disabled]="currentPage === totalPages">More</button>
 
-</div>
+</section>
