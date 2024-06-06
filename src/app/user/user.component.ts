@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { User } from '../types';
 import { NgIf } from '@angular/common';
 import { UserInfoComponent } from '../user-info/user-info.component';
@@ -11,7 +11,13 @@ import { HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [NgIf, UserInfoComponent, UserEditComponent, SpinnerComponent],
+  imports: [
+    NgIf,
+    UserInfoComponent,
+    UserEditComponent,
+    SpinnerComponent,
+    RouterModule,
+  ],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss'
 })

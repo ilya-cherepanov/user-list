@@ -1,0 +1,25 @@
+.user-page {
+  width: max-content;
+  margin-inline: auto;
+}
+
+.user-page__home-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.user-page__avatar {
+  margin-inline: auto;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .user-page__container {
+    display: flex;
+    align-items: top;
+  }
+
+  .user-page__avatar {
+    margin-inline-end: 20px;
+  }
+}

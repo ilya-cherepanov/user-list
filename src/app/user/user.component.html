@@ -1,18 +1,22 @@
-<section>
-  <h2>Profile</h2>
+<section class="user-page">
+  <h2 class="user-page__title">Profile</h2>
+  <a class="user-page__home-link" routerLink="">Back to home</a>
 
   <ng-container *ngIf="user; else loading">
-    <ng-container *ngIf="isEditing; else noEditing">
-      <app-user-edit
-        [user]="user"
-        (onCancel)="setEditing(false)"
-        (onSubmit)="saveUser($event)"
-      />
-    </ng-container>
+    <div class="user-page__container">
+      <img class="user-page__avatar" [src]="user.avatar" height="128" alt="Avatar">
+      <ng-container *ngIf="isEditing; else noEditing">
+        <app-user-edit
+          [user]="user"
+          (onCancel)="setEditing(false)"
+          (onSubmit)="saveUser($event)"
+        />
+      </ng-container>
 
-    <ng-template #noEditing>
-      <app-user-info [user]="user" (onEdit)="setEditing(true)" />
-    </ng-template>
+      <ng-template #noEditing>
+        <app-user-info [user]="user" (onEdit)="setEditing(true)" />
+      </ng-template>
+    </div>
   </ng-container>
 
   <ng-template #loading>

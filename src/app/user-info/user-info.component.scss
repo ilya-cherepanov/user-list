@@ -1,0 +1,14 @@
+.user-info__details {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.user-info__edit-btn {
+  width: max-content;
+  margin-inline: auto;
+}
+
+.user-info__detail-name,
+.user-info__detail-value {
+  margin-block-end: 10px;
+}
