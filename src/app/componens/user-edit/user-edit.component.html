@@ -3,14 +3,47 @@
     <div class="field-group">
       <label class="field-group__label" for="first-name">First Name:</label>
       <input class="field-group__input" id="first-name" type="text" formControlName="firstName">
+      <div
+        *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)"
+        class="field-group__error-container"
+      >
+        <p
+          *ngIf="firstName?.errors?.['required']"
+          class="field-group__error-message"
+        >First name is required!</p>
+      </div>
     </div>
+
     <div class="field-group">
       <label class="field-group__label" for="last-name">Last Name:</label>
       <input class="field-group__input" id="last-name" type="text" formControlName="lastName">
+      <div
+        *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)"
+        class="field-group__error-container"
+      >
+        <p
+          *ngIf="lastName?.errors?.['required']"
+          class="field-group__error-message"
+        >Last name is required!</p>
+      </div>
     </div>
+
     <div class="field-group">
       <label class="field-group__label" for="email">Email:</label>
       <input class="field-group__input" id="email" type="email" formControlName="email">
+      <div
+        *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+        class="field-group__error-container"
+      >
+        <p
+          *ngIf="email?.errors?.['required']"
+          class="field-group__error-message"
+        >Email is required!</p>
+        <p
+          *ngIf="email?.errors?.['email']"
+          class="field-group__error-message"
+        >Email is invalid!</p>
+      </div>
     </div>
 
     <div class="user-edit__buttons">

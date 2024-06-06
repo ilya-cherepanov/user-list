@@ -16,10 +16,11 @@
 @media (min-width: 768px) {
   .user-page__container {
     display: flex;
-    align-items: top;
+    align-items: start;
   }
 
   .user-page__avatar {
+    margin-inline: 0;
     margin-inline-end: 20px;
   }
 }
