@@ -4,20 +4,22 @@
       <label class="field-group__label" for="first-name">First Name:</label>
       <input class="field-group__input" id="first-name" type="text" formControlName="firstName">
     </div>
-    <div>
+    <div class="field-group">
       <label class="field-group__label" for="last-name">Last Name:</label>
       <input class="field-group__input" id="last-name" type="text" formControlName="lastName">
     </div>
-    <div>
+    <div class="field-group">
       <label class="field-group__label" for="email">Email:</label>
       <input class="field-group__input" id="email" type="email" formControlName="email">
     </div>
 
-    <button
-      class="btn user-edit__cancel-btn"
-      type="button"
-      (click)="clickCancel($event)"
-    >Cancel</button>
-    <button class="btn user-edit__submit-btn" type="submit">Save</button>
+    <div class="user-edit__buttons">
+      <button
+        class="btn user-edit__cancel-btn"
+        type="button"
+        (click)="clickCancel($event)"
+      >Cancel</button>
+      <button class="btn user-edit__submit-btn" type="submit">Save</button>
+    </div>
   </form>
 </div>
